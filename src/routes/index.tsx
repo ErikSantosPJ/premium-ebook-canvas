@@ -16,8 +16,10 @@ import {
   Zap,
 } from "lucide-react";
 import heroImg from "@/assets/hero-regeneration.jpg";
-import ebookMockup from "@/assets/ebook-mockup.jpg";
+import ebookCover from "@/assets/ebook-cover.jpg.asset.json";
 import molecular from "@/assets/texture-molecular.jpg";
+
+const ebookMockup = ebookCover.url;
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
