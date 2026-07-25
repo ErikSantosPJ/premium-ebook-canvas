@@ -513,49 +513,26 @@ function Author() {
   );
 }
 
-/* ---------- Testimonials (aspirational) ---------- */
+/* ---------- Testimonials (placeholder — reais em breve) ---------- */
 function Testimonials() {
-  const items = [
-    {
-      q: "Parei de trocar ativo a cada consulta. Agora entrego estratégia — e o paciente sente a diferença logo no primeiro retorno.",
-      a: "Cosmetóloga · SP",
-    },
-    {
-      q: "O A1 mudou meu consultório. Antes eu queria acertar o ativo. Hoje eu alinho a base primeiro e o resto flui.",
-      a: "Esteticista · MG",
-    },
-    {
-      q: "Finalmente entendi por que fórmulas 'copiadas' não funcionavam. O 4A me deu autonomia clínica.",
-      a: "Farmacêutica magistral · RS",
-    },
-  ];
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
-      <div className="mb-14 max-w-2xl">
+    <section className="mx-auto max-w-5xl px-6 py-24">
+      <div className="rounded-3xl border border-gold/20 bg-surface/50 p-10 text-center lg:p-14">
         <Eyebrow>Ecos da prática</Eyebrow>
-        <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
-          Profissionais que abandonaram a tentativa e erro.
+        <h2 className="mt-4 font-display text-3xl leading-tight sm:text-4xl">
+          Depoimentos de profissionais que aplicaram o{" "}
+          <span className="italic text-gold-gradient">Método 4A</span> em breve.
         </h2>
-      </div>
-      <div className="grid gap-6 md:grid-cols-3">
-        {items.map((t, i) => (
-          <figure
-            key={i}
-            className="flex h-full flex-col rounded-2xl border border-gold/15 bg-surface/50 p-7 backdrop-blur"
-          >
-            <div className="flex gap-0.5 text-gold">
-              {Array.from({ length: 5 }).map((_, k) => (
-                <Star key={k} className="h-4 w-4 fill-current" />
-              ))}
-            </div>
-            <blockquote className="mt-5 flex-1 font-display italic text-lg leading-relaxed text-foreground/90">
-              "{t.q}"
-            </blockquote>
-            <figcaption className="mt-6 text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              — {t.a}
-            </figcaption>
-          </figure>
-        ))}
+        <p className="mt-5 mx-auto max-w-2xl text-muted-foreground leading-relaxed">
+          Estamos organizando os relatos recebidos de cosmetólogas, esteticistas e farmacêuticas
+          magistrais que já aplicam o método no consultório e na manipulação. Este espaço será atualizado
+          em breve com falas reais — nada de frases inventadas.
+        </p>
+        <div className="mt-8 inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.3em] text-gold">
+          <span className="h-px w-8 bg-gold/60" />
+          Atualização em curso
+          <span className="h-px w-8 bg-gold/60" />
+        </div>
       </div>
     </section>
   );
