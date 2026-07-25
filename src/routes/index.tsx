@@ -93,9 +93,9 @@ function Hero() {
         src={heroImg}
         alt=""
         aria-hidden
-        className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25"
+        className="absolute inset-0 -z-20 h-full w-full object-cover opacity-[0.08]"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/70 via-background/85 to-background" />
 
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:py-32 lg:gap-16 items-center">
         <div className="animate-fade-up">
