@@ -109,14 +109,14 @@
 
 @utility noise {
   position: relative;
-}
-@utility noise::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(oklch(0.78 0.14 82 / 0.06) 1px, transparent 1px);
-  background-size: 3px 3px;
-  pointer-events: none;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(oklch(0.78 0.14 82 / 0.06) 1px, transparent 1px);
+    background-size: 3px 3px;
+    pointer-events: none;
+  }
 }
 
 @keyframes float-slow {
