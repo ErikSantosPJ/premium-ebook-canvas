@@ -10,7 +10,7 @@ import {
   Activity,
   FlaskConical,
   BookOpen,
-  Star as _Star,
+  
   Lock,
   Clock,
   Zap,
