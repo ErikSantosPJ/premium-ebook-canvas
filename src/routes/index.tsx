@@ -140,13 +140,13 @@ function Hero() {
         </div>
 
         <div className="relative flex justify-center">
-          <div className="absolute -inset-8 rounded-full bg-gold/10 blur-3xl" />
+          <div className="absolute -inset-8 rounded-full bg-gold/15 blur-3xl" />
           <img
             src={ebookMockup}
             alt="Capa do e-book Cosmetologia Regenerativa - Método 4A"
-            width={1200}
+            width={1000}
             height={1400}
-            className="relative w-[85%] max-w-md animate-float drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)]"
+            className="relative w-[82%] max-w-md animate-float rounded-md drop-shadow-[0_35px_60px_rgba(80,55,40,0.25)]"
           />
         </div>
       </div>
