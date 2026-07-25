@@ -175,12 +175,12 @@ function Marquee() {
     "Raciocínio Clínico",
   ];
   return (
-    <div className="border-y border-gold/10 bg-surface/40 py-5 overflow-hidden">
-      <div className="flex gap-12 animate-[shimmer_30s_linear_infinite] whitespace-nowrap">
-        {[...items, ...items, ...items].map((i, idx) => (
+    <div className="border-y border-gold/15 bg-surface/50 py-5 overflow-hidden">
+      <div className="flex w-max animate-marquee">
+        {[...items, ...items].map((i, idx) => (
           <span
             key={idx}
-            className="font-display italic text-lg text-muted-foreground/70 flex items-center gap-12"
+            className="font-display italic text-lg text-muted-foreground/80 flex items-center gap-12 pr-12 whitespace-nowrap"
           >
             {i} <span className="text-gold">◆</span>
           </span>
