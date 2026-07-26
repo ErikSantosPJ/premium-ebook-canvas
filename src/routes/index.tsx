@@ -721,9 +721,10 @@ function FinalCTA() {
         </p>
         <a
           href={CHECKOUT_URL}
-          className="mt-10 inline-flex items-center gap-3 rounded-full bg-gold-gradient px-10 py-5 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110"
+          className="mt-10 inline-flex w-full max-w-md items-center justify-center gap-3 rounded-full bg-gold-gradient px-6 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:w-auto sm:px-10 sm:py-5 sm:text-sm sm:tracking-widest"
         >
-          Quero o e-book por R$ 187 <ArrowRight className="h-4 w-4" />
+          <span className="whitespace-nowrap">Quero o e-book por R$ 187</span>
+          <ArrowRight className="h-4 w-4 shrink-0" />
         </a>
         <p className="mt-5 text-xs text-muted-foreground">
           ou 10x de R$ 22,03 · garantia de 7 dias · acesso imediato
