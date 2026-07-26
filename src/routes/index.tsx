@@ -119,16 +119,17 @@ function Hero() {
             "Não é sobre o ativo. É sobre o raciocínio."
           </blockquote>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               href={CHECKOUT_URL}
-              className="group inline-flex items-center gap-3 rounded-full bg-gold-gradient px-8 py-4 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-gold)] hover:brightness-110 transition"
+              className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-gold-gradient px-6 py-4 text-center text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:w-auto sm:px-8 sm:text-xs sm:tracking-widest"
             >
-              Quero o e-book por R$ 187
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+              <span className="whitespace-nowrap">Quero o e-book por R$ 187</span>
+              <ArrowRight className="h-4 w-4 shrink-0 transition group-hover:translate-x-1" />
             </a>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <Lock className="h-3.5 w-3.5 text-gold" /> Compra 100% segura · Acesso imediato
+              <Lock className="h-3.5 w-3.5 shrink-0 text-gold" />
+              <span>Compra 100% segura · Acesso imediato</span>
             </div>
           </div>
 
