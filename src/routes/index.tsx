@@ -140,7 +140,7 @@ function Hero() {
         </div>
 
         <div className="relative flex justify-center">
-          <div className="absolute inset-x-10 bottom-6 h-24 rounded-full bg-mocha/25 blur-3xl" />
+          <div className="absolute inset-x-10 bottom-6 h-24 rounded-full bg-gold/20 blur-3xl" />
           <img
             src={ebookMockup}
             alt="Capa do e-book Cosmetologia Regenerativa - Método 4A"
