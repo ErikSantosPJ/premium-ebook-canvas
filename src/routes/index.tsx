@@ -584,38 +584,38 @@ function Pricing() {
               </ul>
             </div>
 
-            <div className="relative border-t border-gold/20 bg-background/50 p-10 lg:border-l lg:border-t-0 lg:p-12">
+            <div className="relative border-t border-gold/20 bg-background/50 p-6 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
               <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">De</div>
-              <div className="mt-1 font-display text-3xl text-muted-foreground line-through decoration-destructive/60">
+              <div className="mt-1 font-display text-2xl text-muted-foreground line-through decoration-destructive/60 sm:text-3xl">
                 R$ 247,00
               </div>
 
               <div className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">Por apenas</div>
-              <div className="mt-2 flex items-baseline gap-2">
-                <span className="font-display text-6xl text-gold-gradient leading-none">R$ 187</span>
-                <span className="font-display text-2xl text-gold/70">,00</span>
+              <div className="mt-2 flex items-baseline gap-1.5 sm:gap-2">
+                <span className="font-display text-5xl leading-none text-gold-gradient sm:text-6xl">R$ 187</span>
+                <span className="font-display text-xl text-gold/70 sm:text-2xl">,00</span>
               </div>
               <div className="mt-3 text-sm text-muted-foreground">
-                ou <span className="text-foreground font-medium">10x de R$ 22,03</span> no cartão
+                ou <span className="font-medium text-foreground">10x de R$ 22,03</span> no cartão
               </div>
 
               <a
                 href={CHECKOUT_URL}
-                className="mt-8 flex w-full items-center justify-center gap-3 rounded-full bg-gold-gradient px-6 py-4 text-sm font-semibold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110"
+                className="mt-8 flex w-full items-center justify-center gap-3 rounded-full bg-gold-gradient px-4 py-4 text-center text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:px-6 sm:text-sm sm:tracking-widest"
               >
-                Quero começar agora
-                <ArrowRight className="h-4 w-4" />
+                <span className="whitespace-nowrap">Quero começar agora</span>
+                <ArrowRight className="h-4 w-4 shrink-0" />
               </a>
 
               <div className="mt-5 flex flex-col gap-2 text-xs text-muted-foreground">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="h-3.5 w-3.5 text-gold" /> Garantia incondicional de 7 dias
+                  <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-gold" /> Garantia incondicional de 7 dias
                 </div>
                 <div className="flex items-center gap-2">
-                  <Clock className="h-3.5 w-3.5 text-gold" /> Acesso liberado em minutos
+                  <Clock className="h-3.5 w-3.5 shrink-0 text-gold" /> Acesso liberado em minutos
                 </div>
                 <div className="flex items-center gap-2">
-                  <Lock className="h-3.5 w-3.5 text-gold" /> Pagamento 100% seguro
+                  <Lock className="h-3.5 w-3.5 shrink-0 text-gold" /> Pagamento 100% seguro
                 </div>
               </div>
             </div>
