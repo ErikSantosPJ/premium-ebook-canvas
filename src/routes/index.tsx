@@ -272,27 +272,55 @@ function Solution() {
           </h2>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-gold/20 bg-surface/60 backdrop-blur">
-          <div className="grid grid-cols-3 border-b border-gold/20 bg-surface-elevated/70 text-[0.7rem] uppercase tracking-[0.25em]">
-            <div className="p-5 text-muted-foreground">Aspecto</div>
-            <div className="p-5 text-muted-foreground border-l border-gold/10">Estética Tradicional</div>
-            <div className="p-5 text-gold border-l border-gold/10">Cosmetologia Regenerativa</div>
+        {/* Mobile: cards empilhados */}
+        <div className="space-y-3 md:hidden">
+          {rows.map(([a, b, c]) => (
+            <div key={a} className="rounded-2xl border border-gold/20 bg-surface/60 p-5 backdrop-blur">
+              <div className="text-[0.65rem] uppercase tracking-[0.25em] text-muted-foreground">{a}</div>
+              <div className="mt-3 space-y-3">
+                <div>
+                  <div className="text-[0.6rem] uppercase tracking-[0.2em] text-muted-foreground/70">
+                    Estética Tradicional
+                  </div>
+                  <div className="mt-1 text-sm leading-snug text-muted-foreground line-through decoration-destructive/50 decoration-1">
+                    {b}
+                  </div>
+                </div>
+                <div className="h-px w-full bg-gold/10" />
+                <div>
+                  <div className="text-[0.6rem] uppercase tracking-[0.2em] text-gold">
+                    Cosmetologia Regenerativa
+                  </div>
+                  <div className="mt-1 text-sm leading-snug text-foreground">{c}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Tablet / Desktop: tabela */}
+        <div className="hidden overflow-hidden rounded-2xl border border-gold/20 bg-surface/60 backdrop-blur md:block">
+          <div className="grid grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)_minmax(0,1fr)] border-b border-gold/20 bg-surface-elevated/70 text-[0.6rem] uppercase tracking-[0.18em] lg:text-[0.7rem] lg:tracking-[0.25em]">
+            <div className="p-4 text-muted-foreground lg:p-5">Aspecto</div>
+            <div className="border-l border-gold/10 p-4 text-muted-foreground lg:p-5">Estética Tradicional</div>
+            <div className="border-l border-gold/10 p-4 text-gold lg:p-5">Cosmetologia Regenerativa</div>
           </div>
           {rows.map(([a, b, c], i) => (
             <div
               key={a}
-              className={`grid grid-cols-3 text-sm sm:text-base ${
+              className={`grid grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)_minmax(0,1fr)] text-sm lg:text-base ${
                 i !== rows.length - 1 ? "border-b border-gold/10" : ""
               }`}
             >
-              <div className="p-5 font-display text-foreground">{a}</div>
-              <div className="p-5 text-muted-foreground border-l border-gold/10 line-through decoration-destructive/50 decoration-1">
+              <div className="p-4 font-display text-foreground lg:p-5">{a}</div>
+              <div className="border-l border-gold/10 p-4 leading-snug text-muted-foreground line-through decoration-destructive/50 decoration-1 lg:p-5">
                 {b}
               </div>
-              <div className="p-5 text-foreground border-l border-gold/10">{c}</div>
+              <div className="border-l border-gold/10 p-4 leading-snug text-foreground lg:p-5">{c}</div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
