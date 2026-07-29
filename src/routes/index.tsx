@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
   component: LandingPage,
 });
 
-const CHECKOUT_URL = "#comprar";
+const CHECKOUT_URL = "https://hotm.io/jMbG8b8j";
 
 function LandingPage() {
   return (
