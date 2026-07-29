@@ -657,19 +657,19 @@ function Guarantee() {
 function FAQ() {
   const faqs = [
     {
-      q: "Preciso ter formação em estética ou farmácia magistral?",
+      q: "Preciso de formação prévia?",
       a: "O e-book é escrito para esteticistas, cosmetólogas e farmacêuticos magistrais. Mas qualquer profissional que trabalhe com pele e queira raciocinar clinicamente vai extrair valor.",
     },
     {
-      q: "Vou receber ativos e fórmulas prontas?",
+      q: "Vem com fórmulas prontas?",
       a: "Não. E esse é o ponto. Fórmulas prontas mantêm você presa à tentativa e erro. O Método 4A te dá algo maior: a estrutura de pensamento para construir suas próprias estratégias.",
     },
     {
-      q: "Como recebo o e-book?",
+      q: "Como recebo o acesso?",
       a: "Assim que o pagamento é aprovado, você recebe o acesso digital no e-mail. Leitura vitalícia — pode voltar quantas vezes quiser.",
     },
     {
-      q: "Existe suporte ou continuação?",
+      q: "Tem suporte e continuação?",
       a: "Este é o produto base do ecossistema Método 4A. Novos materiais e aprofundamentos estão em construção — quem entra pela base tem prioridade.",
     },
     {
@@ -678,30 +678,31 @@ function FAQ() {
     },
   ];
   return (
-    <section className="mx-auto max-w-4xl px-6 py-24">
-      <div className="mb-12 text-center">
+    <section className="mx-auto w-full max-w-3xl px-5 py-20 sm:px-6 sm:py-24">
+      <div className="mb-10 text-center sm:mb-12">
         <Eyebrow>Perguntas frequentes</Eyebrow>
-        <h2 className="mt-4 font-display text-4xl sm:text-5xl">Ainda tem dúvidas?</h2>
+        <h2 className="mt-4 font-display text-3xl sm:text-5xl">Ainda tem dúvidas?</h2>
       </div>
-      <div className="space-y-3">
+      <Accordion type="single" collapsible className="space-y-3">
         {faqs.map((f, i) => (
-          <details
+          <AccordionItem
             key={i}
-            className="group rounded-xl border border-border bg-surface/40 open:border-gold/40 open:bg-surface-elevated/60 transition"
+            value={`item-${i}`}
+            className="rounded-xl border border-border bg-surface/40 px-4 transition data-[state=open]:border-gold/40 data-[state=open]:bg-surface-elevated/60 sm:px-6"
           >
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-6 font-display text-lg text-foreground">
+            <AccordionTrigger className="gap-4 py-5 text-left font-display text-base leading-snug text-foreground hover:no-underline sm:text-lg">
               {f.q}
-              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-gold/30 text-gold transition group-open:rotate-45">
-                +
-              </span>
-            </summary>
-            <div className="px-6 pb-6 text-muted-foreground leading-relaxed">{f.a}</div>
-          </details>
+            </AccordionTrigger>
+            <AccordionContent className="pb-5 text-[0.95rem] leading-relaxed text-muted-foreground">
+              {f.a}
+            </AccordionContent>
+          </AccordionItem>
         ))}
-      </div>
+      </Accordion>
     </section>
   );
 }
+
 
 /* ---------- Final CTA ---------- */
 function FinalCTA() {
