@@ -68,6 +68,8 @@ function TopBar() {
         </div>
         <a
           href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-gold hover:bg-gold/20 transition"
         >
           Garantir acesso <ArrowRight className="h-3.5 w-3.5" />
@@ -128,6 +130,8 @@ function Hero() {
           <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-gold-gradient px-6 py-4 text-center text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:w-auto sm:px-8 sm:text-xs sm:tracking-widest"
             >
               <span className="whitespace-nowrap">Quero o e-book por R$ 187</span>
@@ -635,6 +639,8 @@ function Pricing() {
 
               <a
                 href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
                 className="mt-8 flex w-full items-center justify-center gap-3 rounded-full bg-gold-gradient px-4 py-4 text-center text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:px-6 sm:text-sm sm:tracking-widest"
               >
                 <span className="whitespace-nowrap">Quero começar agora</span>
@@ -742,6 +748,8 @@ function OrderSummary() {
 
           <a
             href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
             className="mt-6 flex w-full items-center justify-center gap-3 rounded-full bg-gold-gradient px-4 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:text-sm sm:tracking-widest"
           >
             <span className="whitespace-nowrap">Finalizar compra</span>
@@ -854,6 +862,8 @@ function FinalCTA() {
         </p>
         <a
           href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
           className="mt-10 inline-flex w-full max-w-md items-center justify-center gap-3 rounded-full bg-gold-gradient px-6 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:w-auto sm:px-10 sm:py-5 sm:text-sm sm:tracking-widest"
         >
           <span className="whitespace-nowrap">Quero o e-book por R$ 187</span>
