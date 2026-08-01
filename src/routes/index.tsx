@@ -715,9 +715,38 @@ function FAQ() {
     },
     {
       q: "E se eu não gostar?",
-      a: "Garantia incondicional de 7 dias. Sem burocracia, sem perguntas.",
+      a: "Garantia incondicional de 7 dias. Você pede o reembolso e recebe 100% do valor de volta, sem burocracia e sem perguntas.",
+    },
+    {
+      q: "Quais formas de pagamento?",
+      a: "Cartão de crédito em até 10x de R$ 22,03, Pix ou boleto. No Pix e no cartão à vista o acesso é liberado na hora: R$ 187,00.",
+    },
+    {
+      q: "O pagamento é seguro?",
+      a: "Sim. A compra é processada pela Hotmart, plataforma líder em produtos digitais no Brasil. Nós não temos acesso aos dados do seu cartão.",
+    },
+    {
+      q: "Em que formato recebo?",
+      a: "PDF em alta resolução, otimizado para leitura no celular, tablet, computador ou impresso. Download imediato e ilimitado.",
+    },
+    {
+      q: "Quanto tempo leva pra ler?",
+      a: "É uma leitura densa mas objetiva: dá para concluir em poucas horas. A ideia, porém, é usar como material de consulta no dia a dia do atendimento.",
+    },
+    {
+      q: "Serve para quem já atende?",
+      a: "Especialmente. Se você já atende e sente que os resultados oscilam sem explicação, o Método 4A organiza o seu raciocínio e traz previsibilidade aos protocolos.",
+    },
+    {
+      q: "Posso emitir nota fiscal?",
+      a: "Sim. A Hotmart disponibiliza o comprovante de compra e a nota fiscal, o que permite lançar o valor como investimento profissional.",
+    },
+    {
+      q: "Preciso comprar produtos?",
+      a: "Não. O conteúdo é independente de marca. Você aprende a avaliar ativos e escolher o que faz sentido para cada pele — com o que já tem disponível.",
     },
   ];
+
   return (
     <section className="mx-auto w-full max-w-3xl px-5 py-20 sm:px-6 sm:py-24">
       <div className="mb-10 text-center sm:mb-12">
