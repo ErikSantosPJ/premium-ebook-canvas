@@ -661,8 +661,6 @@ function Pricing() {
             </div>
           </div>
         </div>
-
-        <OrderSummary />
       </div>
     </section>
   );
