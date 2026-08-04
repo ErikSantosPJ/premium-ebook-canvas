@@ -537,7 +537,16 @@ function Author() {
 
       <div className="relative mx-auto max-w-5xl px-6 text-center">
         <Eyebrow>O autor</Eyebrow>
-        <h2 className="mt-4 font-display text-4xl sm:text-5xl">Erik dos Santos</h2>
+        <div className="relative mx-auto mt-8 w-[180px] sm:w-[220px]">
+          <div className="absolute inset-0 rounded-full bg-gold/25 blur-2xl" aria-hidden />
+          <img
+            src={authorPhoto.url}
+            alt="Erik dos Santos, autor do e-book Cosmetologia Regenerativa Aplicada"
+            className="relative w-full rounded-full border border-gold/30 bg-surface/60 object-cover shadow-2xl"
+            loading="lazy"
+          />
+        </div>
+        <h2 className="mt-8 font-display text-4xl sm:text-5xl">Erik dos Santos</h2>
         <p className="mt-2 text-sm uppercase tracking-[0.3em] text-gold">Cosmetologia Regenerativa</p>
         <p className="mt-8 mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
           Erik une ciência, raciocínio clínico e prática magistral em um método próprio que tira a
