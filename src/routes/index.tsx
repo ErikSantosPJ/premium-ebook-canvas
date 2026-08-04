@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-regeneration.jpg";
 import ebookCover from "@/assets/ebook-mockup.png.asset.json";
+import authorPhoto from "@/assets/autor.png.asset.json";
 import molecular from "@/assets/texture-molecular.jpg";
 
 const ebookMockup = ebookCover.url;
