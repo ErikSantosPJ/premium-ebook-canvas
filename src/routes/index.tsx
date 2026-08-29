@@ -22,11 +22,10 @@ import {
   Zap,
 } from "lucide-react";
 import heroImg from "@/assets/hero-regeneration.jpg";
-import ebookCover from "@/assets/ebook-mockup.png.asset.json";
-import authorPhoto from "@/assets/autor.png.asset.json";
+import ebookMockup from "@/assets/ebook-mockup.png";
+import authorPhoto from "@/assets/autor.png";
 import molecular from "@/assets/texture-molecular.jpg";
 
-const ebookMockup = ebookCover.url;
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
@@ -540,7 +539,7 @@ function Author() {
         <div className="relative mx-auto mt-8 w-[180px] sm:w-[220px]">
           <div className="absolute inset-0 rounded-full bg-gold/25 blur-2xl" aria-hidden />
           <img
-            src={authorPhoto.url}
+            src={authorPhoto}
             alt="Erik dos Santos, autor do e-book Cosmetologia Regenerativa Aplicada"
             className="relative w-full rounded-full border border-gold/30 bg-surface/60 object-cover shadow-2xl"
             loading="lazy"
