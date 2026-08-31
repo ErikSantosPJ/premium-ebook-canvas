@@ -419,6 +419,92 @@ function Method4A() {
   );
 }
 
+/* ---------- Ecosystem ---------- */
+function Ecosystem() {
+  const books = [
+    {
+      n: "01",
+      title: "Método 4A",
+      subtitle: "E-book base",
+      icon: Compass,
+      description:
+        "A fundação do ecossistema. A estrutura de raciocínio clínico que transforma prescrição em processo: Alinhar, Aprender, Avaliar e Acompanhar.",
+      highlight: "Raciocínio clínico",
+    },
+    {
+      n: "02",
+      title: "Banco de Ativos",
+      subtitle: "Produto 2",
+      icon: Library,
+      description:
+        "Domínio técnico dos ativos que fazem sentido na regeneração: PDRN, BioPDRN, exossomos vegetais, K Somes, microbioma e muito mais — com ciência por trás de cada um.",
+      highlight: "Domínio técnico",
+    },
+    {
+      n: "03",
+      title: "Banco de Fórmulas",
+      subtitle: "Produto 3",
+      icon: BookMarked,
+      description:
+        "150 fórmulas magistrais comentadas por queixa. A ponte entre o raciocínio e a prática real, com o raciocínio por trás de cada combinação.",
+      highlight: "Prática magistral",
+    },
+  ];
+
+  return (
+    <section className="relative overflow-hidden py-24 lg:py-32">
+      <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-radial-gold)" }} />
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-6 text-center">
+          <Eyebrow>Trilogia completa</Eyebrow>
+        </div>
+        <h2 className="mx-auto mb-6 max-w-3xl text-center font-display text-4xl leading-tight sm:text-5xl">
+          3 e-books que formam o ecossistema da{" "}
+          <span className="italic text-gold-gradient">Cosmetologia Regenerativa</span>.
+        </h2>
+        <p className="mx-auto mb-16 max-w-2xl text-center text-lg text-muted-foreground leading-relaxed">
+          O Método 4A é a base. O Banco de Ativos te dá o domínio técnico. O Banco de Fórmulas te entrega a
+          aplicação prática. Juntos, cobrem do raciocínio clínico à prescrição real.
+        </p>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {books.map((b) => (
+            <div
+              key={b.n}
+              className="group relative flex flex-col rounded-2xl border border-gold/15 bg-gradient-to-br from-surface-elevated/80 to-surface/40 p-8 backdrop-blur transition hover:border-gold/40"
+            >
+              <div className="absolute -top-6 -right-6 h-32 w-32 rounded-full bg-gold/5 blur-2xl transition group-hover:bg-gold/15" />
+              <div className="relative">
+                <div className="flex items-start justify-between">
+                  <div className="font-display text-5xl text-gold/40">{b.n}</div>
+                  <div className="grid h-11 w-11 place-items-center rounded-full border border-gold/30 bg-gold/5">
+                    <b.icon className="h-5 w-5 text-gold" />
+                  </div>
+                </div>
+                <div className="mt-6 text-[0.7rem] uppercase tracking-[0.3em] text-gold">{b.subtitle}</div>
+                <h3 className="mt-2 font-display text-2xl text-foreground">{b.title}</h3>
+                <p className="mt-4 flex-1 text-muted-foreground leading-relaxed">{b.description}</p>
+                <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/5 px-3 py-1 text-xs text-gold/90">
+                  <Star className="h-3 w-3" /> {b.highlight}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-14 rounded-2xl border border-gold/20 bg-surface/40 p-8 text-center md:p-10">
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-foreground/90">
+            <span className="font-semibold text-gold">Por que os 3 juntos?</span> Porque prescrever sem
+            raciocínio é tentativa e erro. Conhecer ativos sem estratégia é acumulação de informação. E ter
+            fórmulas sem entender o raciocínio por trás delas é copiar sem critério. Os 3 materiais se
+            conversam — e é nessa conversa que sua prescrição ganha previsibilidade.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Chapters ---------- */
 function Chapters() {
   const chapters = [
