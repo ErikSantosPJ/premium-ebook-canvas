@@ -842,7 +842,7 @@ function Bundle() {
                 <span className="font-display text-xl text-gold/70 sm:text-2xl">,00</span>
               </div>
               <div className="mt-3 text-sm text-muted-foreground">
-                ou em até <span className="font-medium text-foreground">10x de R$ 22,03</span> no cartão
+                ou em até <span className="font-medium text-foreground">10x no cartão</span>
               </div>
 
               <a
