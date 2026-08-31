@@ -16,7 +16,10 @@ import {
   Activity,
   FlaskConical,
   BookOpen,
-  
+  Library,
+  BookMarked,
+  Package,
+  Star,
   Lock,
   Clock,
   Zap,
@@ -32,6 +35,7 @@ export const Route = createFileRoute("/")({
 });
 
 const CHECKOUT_URL = "https://hotm.io/jMbG8b8j";
+const COMBO_URL = "https://pay.hotmart.com/N105770857X?off=4wihtw2s&checkoutMode=10&bid=1788213100496";
 
 function LandingPage() {
   return (
@@ -42,11 +46,13 @@ function LandingPage() {
       <Problem />
       <Solution />
       <Method4A />
+      <Ecosystem />
       <Chapters />
       <ForWhom />
       <Author />
       <Testimonials />
       <Pricing />
+      <Bundle />
       <Guarantee />
       <FAQ />
       <FinalCTA />
@@ -413,6 +419,92 @@ function Method4A() {
   );
 }
 
+/* ---------- Ecosystem ---------- */
+function Ecosystem() {
+  const books = [
+    {
+      n: "01",
+      title: "Método 4A",
+      subtitle: "E-book base",
+      icon: Compass,
+      description:
+        "A fundação do ecossistema. A estrutura de raciocínio clínico que transforma prescrição em processo: Alinhar, Aprender, Avaliar e Acompanhar.",
+      highlight: "Raciocínio clínico",
+    },
+    {
+      n: "02",
+      title: "Banco de Ativos",
+      subtitle: "Produto 2",
+      icon: Library,
+      description:
+        "Domínio técnico dos ativos que fazem sentido na regeneração: PDRN, BioPDRN, exossomos vegetais, K Somes, microbioma e muito mais — com ciência por trás de cada um.",
+      highlight: "Domínio técnico",
+    },
+    {
+      n: "03",
+      title: "Banco de Fórmulas",
+      subtitle: "Produto 3",
+      icon: BookMarked,
+      description:
+        "150 fórmulas magistrais comentadas por queixa. A ponte entre o raciocínio e a prática real, com o raciocínio por trás de cada combinação.",
+      highlight: "Prática magistral",
+    },
+  ];
+
+  return (
+    <section className="relative overflow-hidden py-24 lg:py-32">
+      <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-radial-gold)" }} />
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-6 text-center">
+          <Eyebrow>Trilogia completa</Eyebrow>
+        </div>
+        <h2 className="mx-auto mb-6 max-w-3xl text-center font-display text-4xl leading-tight sm:text-5xl">
+          3 e-books que formam o ecossistema da{" "}
+          <span className="italic text-gold-gradient">Cosmetologia Regenerativa</span>.
+        </h2>
+        <p className="mx-auto mb-16 max-w-2xl text-center text-lg text-muted-foreground leading-relaxed">
+          O Método 4A é a base. O Banco de Ativos te dá o domínio técnico. O Banco de Fórmulas te entrega a
+          aplicação prática. Juntos, cobrem do raciocínio clínico à prescrição real.
+        </p>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {books.map((b) => (
+            <div
+              key={b.n}
+              className="group relative flex flex-col rounded-2xl border border-gold/15 bg-gradient-to-br from-surface-elevated/80 to-surface/40 p-8 backdrop-blur transition hover:border-gold/40"
+            >
+              <div className="absolute -top-6 -right-6 h-32 w-32 rounded-full bg-gold/5 blur-2xl transition group-hover:bg-gold/15" />
+              <div className="relative">
+                <div className="flex items-start justify-between">
+                  <div className="font-display text-5xl text-gold/40">{b.n}</div>
+                  <div className="grid h-11 w-11 place-items-center rounded-full border border-gold/30 bg-gold/5">
+                    <b.icon className="h-5 w-5 text-gold" />
+                  </div>
+                </div>
+                <div className="mt-6 text-[0.7rem] uppercase tracking-[0.3em] text-gold">{b.subtitle}</div>
+                <h3 className="mt-2 font-display text-2xl text-foreground">{b.title}</h3>
+                <p className="mt-4 flex-1 text-muted-foreground leading-relaxed">{b.description}</p>
+                <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/5 px-3 py-1 text-xs text-gold/90">
+                  <Star className="h-3 w-3" /> {b.highlight}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-14 rounded-2xl border border-gold/20 bg-surface/40 p-8 text-center md:p-10">
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-foreground/90">
+            <span className="font-semibold text-gold">Por que os 3 juntos?</span> Porque prescrever sem
+            raciocínio é tentativa e erro. Conhecer ativos sem estratégia é acumulação de informação. E ter
+            fórmulas sem entender o raciocínio por trás delas é copiar sem critério. Os 3 materiais se
+            conversam — e é nessa conversa que sua prescrição ganha previsibilidade.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Chapters ---------- */
 function Chapters() {
   const chapters = [
@@ -673,6 +765,114 @@ function Pricing() {
   );
 }
 
+
+/* ---------- Bundle ---------- */
+function Bundle() {
+  const items = [
+    { name: "E-book Cosmetologia Regenerativa — Método 4A", original: 247, combo: 187 },
+    { name: "Banco de Ativos da Cosmetologia Regenerativa", original: 97, combo: 47 },
+    { name: "Banco de Fórmulas Magistrais", original: 87, combo: 37 },
+  ];
+  const totalOriginal = items.reduce((s, i) => s + i.original, 0);
+  const totalCombo = items.reduce((s, i) => s + i.combo, 0);
+  const economia = totalOriginal - totalCombo;
+
+  return (
+    <section id="combo" className="relative overflow-hidden py-24 lg:py-32">
+      <img
+        src={molecular}
+        alt=""
+        aria-hidden
+        className="absolute inset-0 -z-20 h-full w-full object-cover opacity-10"
+      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/90 to-background" />
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="mb-6 text-center">
+          <Eyebrow>Oferta de ecossistema</Eyebrow>
+        </div>
+        <h2 className="mx-auto mb-6 max-w-3xl text-center font-display text-4xl leading-tight sm:text-5xl">
+          Leve os <span className="italic text-gold-gradient">3 e-books</span> juntos e complete sua
+          formação.
+        </h2>
+        <p className="mx-auto mb-14 max-w-2xl text-center text-lg text-muted-foreground leading-relaxed">
+          Quem parte pela base e quer ir além leva o ecossistema completo. Você economiza e ainda recebe os
+          três materiais com a mesma qualidade e acesso imediato.
+        </p>
+
+        <div className="overflow-hidden rounded-3xl border border-gold/40 bg-gradient-to-br from-surface-elevated/90 to-surface/50 shadow-[var(--shadow-elegant)]">
+          <div className="grid gap-0 lg:grid-cols-[1fr_1fr]">
+            <div className="p-8 lg:p-12">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[0.65rem] uppercase tracking-[0.3em] text-gold">
+                <Package className="h-3 w-3" /> Combo dos 3 e-books
+              </div>
+              <h3 className="mt-5 font-display text-2xl lg:text-3xl">
+                Ecossistema Cosmetologia Regenerativa Aplicada
+              </h3>
+
+              <ul className="mt-7 space-y-3.5">
+                {items.map((it) => (
+                  <li key={it.name} className="flex items-start justify-between gap-4 text-foreground/90">
+                    <span className="text-sm leading-snug sm:text-base">{it.name}</span>
+                    <div className="shrink-0 text-right">
+                      <span className="block text-xs text-muted-foreground line-through decoration-destructive/60">
+                        R$ {it.original},00
+                      </span>
+                      <span className="block text-sm font-medium text-gold">R$ {it.combo},00</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-emerald/30 bg-emerald/10 px-4 py-1.5 text-sm text-emerald">
+                <Sparkles className="h-3.5 w-3.5" /> Economia de R$ {economia},00
+              </div>
+            </div>
+
+            <div className="relative border-t border-gold/20 bg-background/50 p-8 lg:border-l lg:border-t-0 lg:p-12">
+              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Valor total de</div>
+              <div className="mt-1 font-display text-2xl text-muted-foreground line-through decoration-destructive/60 sm:text-3xl">
+                R$ {totalOriginal},00
+              </div>
+
+              <div className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">No combo por apenas</div>
+              <div className="mt-2 flex items-baseline gap-1.5 sm:gap-2">
+                <span className="font-display text-5xl leading-none text-gold-gradient sm:text-6xl">
+                  R$ {totalCombo}
+                </span>
+                <span className="font-display text-xl text-gold/70 sm:text-2xl">,00</span>
+              </div>
+              <div className="mt-3 text-sm text-muted-foreground">
+                ou em até <span className="font-medium text-foreground">10x no cartão</span>
+              </div>
+
+              <a
+                href={COMBO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 flex w-full items-center justify-center gap-3 rounded-full bg-gold-gradient px-4 py-4 text-center text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:px-6 sm:text-sm sm:tracking-widest"
+              >
+                <span className="whitespace-nowrap">Quero os 3 e-books</span>
+                <ArrowRight className="h-4 w-4 shrink-0" />
+              </a>
+
+              <div className="mt-5 flex flex-col gap-2 text-xs text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-gold" /> Garantia incondicional de 7 dias
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="h-3.5 w-3.5 shrink-0 text-gold" /> Acesso liberado em minutos
+                </div>
+                <div className="flex items-center gap-2">
+                  <Lock className="h-3.5 w-3.5 shrink-0 text-gold" /> Pagamento 100% seguro
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 /* ---------- Guarantee ---------- */
 function Guarantee() {
