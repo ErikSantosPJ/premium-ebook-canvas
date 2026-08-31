@@ -766,6 +766,114 @@ function Pricing() {
 }
 
 
+/* ---------- Bundle ---------- */
+function Bundle() {
+  const items = [
+    { name: "E-book Cosmetologia Regenerativa — Método 4A", original: 247, combo: 187 },
+    { name: "Banco de Ativos da Cosmetologia Regenerativa", original: 97, combo: 47 },
+    { name: "Banco de Fórmulas Magistrais", original: 87, combo: 37 },
+  ];
+  const totalOriginal = items.reduce((s, i) => s + i.original, 0);
+  const totalCombo = items.reduce((s, i) => s + i.combo, 0);
+  const economia = totalOriginal - totalCombo;
+
+  return (
+    <section id="combo" className="relative overflow-hidden py-24 lg:py-32">
+      <img
+        src={molecular}
+        alt=""
+        aria-hidden
+        className="absolute inset-0 -z-20 h-full w-full object-cover opacity-10"
+      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/90 to-background" />
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="mb-6 text-center">
+          <Eyebrow>Oferta de ecossistema</Eyebrow>
+        </div>
+        <h2 className="mx-auto mb-6 max-w-3xl text-center font-display text-4xl leading-tight sm:text-5xl">
+          Leve os <span className="italic text-gold-gradient">3 e-books</span> juntos e complete sua
+          formação.
+        </h2>
+        <p className="mx-auto mb-14 max-w-2xl text-center text-lg text-muted-foreground leading-relaxed">
+          Quem parte pela base e quer ir além leva o ecossistema completo. Você economiza e ainda recebe os
+          três materiais com a mesma qualidade e acesso imediato.
+        </p>
+
+        <div className="overflow-hidden rounded-3xl border border-gold/40 bg-gradient-to-br from-surface-elevated/90 to-surface/50 shadow-[var(--shadow-elegant)]">
+          <div className="grid gap-0 lg:grid-cols-[1fr_1fr]">
+            <div className="p-8 lg:p-12">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[0.65rem] uppercase tracking-[0.3em] text-gold">
+                <Package className="h-3 w-3" /> Combo dos 3 e-books
+              </div>
+              <h3 className="mt-5 font-display text-2xl lg:text-3xl">
+                Ecossistema Cosmetologia Regenerativa Aplicada
+              </h3>
+
+              <ul className="mt-7 space-y-3.5">
+                {items.map((it) => (
+                  <li key={it.name} className="flex items-start justify-between gap-4 text-foreground/90">
+                    <span className="text-sm leading-snug sm:text-base">{it.name}</span>
+                    <div className="shrink-0 text-right">
+                      <span className="block text-xs text-muted-foreground line-through decoration-destructive/60">
+                        R$ {it.original},00
+                      </span>
+                      <span className="block text-sm font-medium text-gold">R$ {it.combo},00</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-emerald/30 bg-emerald/10 px-4 py-1.5 text-sm text-emerald">
+                <Sparkles className="h-3.5 w-3.5" /> Economia de R$ {economia},00
+              </div>
+            </div>
+
+            <div className="relative border-t border-gold/20 bg-background/50 p-8 lg:border-l lg:border-t-0 lg:p-12">
+              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Valor total de</div>
+              <div className="mt-1 font-display text-2xl text-muted-foreground line-through decoration-destructive/60 sm:text-3xl">
+                R$ {totalOriginal},00
+              </div>
+
+              <div className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">No combo por apenas</div>
+              <div className="mt-2 flex items-baseline gap-1.5 sm:gap-2">
+                <span className="font-display text-5xl leading-none text-gold-gradient sm:text-6xl">
+                  R$ {totalCombo}
+                </span>
+                <span className="font-display text-xl text-gold/70 sm:text-2xl">,00</span>
+              </div>
+              <div className="mt-3 text-sm text-muted-foreground">
+                ou em até <span className="font-medium text-foreground">10x de R$ 22,03</span> no cartão
+              </div>
+
+              <a
+                href={COMBO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 flex w-full items-center justify-center gap-3 rounded-full bg-gold-gradient px-4 py-4 text-center text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:px-6 sm:text-sm sm:tracking-widest"
+              >
+                <span className="whitespace-nowrap">Quero os 3 e-books</span>
+                <ArrowRight className="h-4 w-4 shrink-0" />
+              </a>
+
+              <div className="mt-5 flex flex-col gap-2 text-xs text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-gold" /> Garantia incondicional de 7 dias
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="h-3.5 w-3.5 shrink-0 text-gold" /> Acesso liberado em minutos
+                </div>
+                <div className="flex items-center gap-2">
+                  <Lock className="h-3.5 w-3.5 shrink-0 text-gold" /> Pagamento 100% seguro
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Guarantee ---------- */
 function Guarantee() {
   return (
