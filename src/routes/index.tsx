@@ -35,6 +35,7 @@ export const Route = createFileRoute("/")({
 });
 
 const CHECKOUT_URL = "https://hotm.io/jMbG8b8j";
+const COMBO_URL = "https://pay.hotmart.com/N105770857X?off=4wihtw2s&checkoutMode=10&bid=1788213100496";
 
 function LandingPage() {
   return (
@@ -45,11 +46,13 @@ function LandingPage() {
       <Problem />
       <Solution />
       <Method4A />
+      <Ecosystem />
       <Chapters />
       <ForWhom />
       <Author />
       <Testimonials />
       <Pricing />
+      <Bundle />
       <Guarantee />
       <FAQ />
       <FinalCTA />
