@@ -16,7 +16,10 @@ import {
   Activity,
   FlaskConical,
   BookOpen,
-  
+  Library,
+  BookMarked,
+  Package,
+  Star,
   Lock,
   Clock,
   Zap,
