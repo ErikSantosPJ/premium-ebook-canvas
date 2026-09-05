@@ -707,7 +707,7 @@ function Pricing() {
           <div className="grid gap-0 lg:grid-cols-[1.1fr_1fr]">
             <div className="p-10 lg:p-12">
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[0.65rem] uppercase tracking-[0.3em] text-gold">
-                <Zap className="h-3 w-3" /> Oferta de lançamento
+                <Zap className="h-3 w-3" /> Opção 1 · Só o e-book base
               </div>
               <h3 className="mt-5 font-display text-3xl">
                 E-book Cosmetologia Regenerativa
