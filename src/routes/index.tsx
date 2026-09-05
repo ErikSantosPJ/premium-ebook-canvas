@@ -679,7 +679,7 @@ function Author() {
 /* ---------- Pricing ---------- */
 function Pricing() {
   const bullets = [
-    "E-book completo — 8 capítulos, +34 páginas",
+    "8 capítulos que reorganizam seu raciocínio clínico",
     "Método 4A completo com exemplos clínicos",
     "Roteiro de avaliação e pensamento em camadas",
     "Guia de associação de ativos com 4 princípios",
@@ -691,10 +691,16 @@ function Pricing() {
       <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-radial-gold)" }} />
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
-          <Eyebrow>Sua entrada no ecossistema</Eyebrow>
+          <Eyebrow>Escolha como começar</Eyebrow>
           <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
             Do raciocínio clínico à <span className="italic text-gold-gradient">prática magistral</span>.
           </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-muted-foreground leading-relaxed">
+            São duas formas de entrar: <span className="text-foreground">Opção 1</span> — só o e-book base,
+            para construir a fundação. <span className="text-foreground">Opção 2</span> — o ecossistema
+            completo com os 3 materiais, logo abaixo, para quem quer raciocínio, ativos e fórmulas de uma
+            vez.
+          </p>
         </div>
 
         <div className="mt-14 overflow-hidden rounded-3xl border border-gold/40 bg-gradient-to-br from-surface-elevated/90 to-surface/50 shadow-[var(--shadow-elegant)]">
@@ -803,7 +809,7 @@ function Bundle() {
           <div className="grid gap-0 lg:grid-cols-[1fr_1fr]">
             <div className="p-8 lg:p-12">
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[0.65rem] uppercase tracking-[0.3em] text-gold">
-                <Package className="h-3 w-3" /> Combo dos 3 e-books
+                <Package className="h-3 w-3" /> Opção 2 · Recomendado
               </div>
               <h3 className="mt-5 font-display text-2xl lg:text-3xl">
                 Ecossistema Cosmetologia Regenerativa Aplicada
@@ -1025,7 +1031,11 @@ function Footer() {
             Método 4A © {new Date().getFullYear()} · Erik dos Santos
           </div>
         </div>
-        <div className="text-xs text-muted-foreground">Cosmetologia Regenerativa Aplicada</div>
+        <div className="max-w-md text-center text-xs leading-relaxed text-muted-foreground sm:text-right">
+          Cosmetologia Regenerativa Aplicada
+          <br />
+          Pagamento, nota fiscal e garantia de 7 dias processados pela Hotmart.
+        </div>
       </div>
     </footer>
   );
