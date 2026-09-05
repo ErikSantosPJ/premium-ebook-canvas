@@ -46,11 +46,20 @@ function LandingPage() {
       <Problem />
       <Solution />
       <Method4A />
+      <InlineCta
+        text="O Método 4A completo está no e-book base."
+        label="Ver a oferta"
+        href="#comprar"
+      />
       <Ecosystem />
+      <InlineCta
+        text="Prefere começar com os três materiais juntos?"
+        label="Ver o combo dos 3"
+        href="#combo"
+      />
       <Chapters />
       <ForWhom />
       <Author />
-      <Testimonials />
       <Pricing />
       <Bundle />
       <Guarantee />
@@ -73,9 +82,7 @@ function TopBar() {
           </div>
         </div>
         <a
-          href={CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+          href="#comprar"
           className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-gold hover:bg-gold/20 transition"
         >
           Garantir acesso <ArrowRight className="h-3.5 w-3.5" />
@@ -166,6 +173,24 @@ function Hero() {
         </div>
       </div>
     </section>
+  );
+}
+
+/* ---------- Inline CTA ---------- */
+function InlineCta({ text, label, href }: { text: string; label: string; href: string }) {
+  return (
+    <div className="mx-auto max-w-7xl px-6">
+      <div className="flex flex-col items-center justify-between gap-5 rounded-2xl border border-gold/20 bg-surface/50 px-7 py-6 text-center sm:flex-row sm:text-left">
+        <p className="font-display text-xl text-foreground/90 sm:text-2xl">{text}</p>
+        <a
+          href={href}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-6 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold transition hover:bg-gold/20 sm:w-auto"
+        >
+          <span className="whitespace-nowrap">{label}</span>
+          <ArrowRight className="h-3.5 w-3.5 shrink-0" />
+        </a>
+      </div>
+    </div>
   );
 }
 
@@ -529,7 +554,7 @@ function Chapters() {
             </h2>
           </div>
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <BookOpen className="h-4 w-4 text-gold" /> +34 páginas · leitura estratégica
+            <BookOpen className="h-4 w-4 text-gold" /> Leitura densa e direta · sem enchimento
           </div>
         </div>
 
@@ -651,35 +676,10 @@ function Author() {
   );
 }
 
-/* ---------- Testimonials (placeholder — reais em breve) ---------- */
-function Testimonials() {
-  return (
-    <section className="mx-auto max-w-5xl px-6 py-24">
-      <div className="rounded-3xl border border-gold/20 bg-surface/50 p-10 text-center lg:p-14">
-        <Eyebrow>Ecos da prática</Eyebrow>
-        <h2 className="mt-4 font-display text-3xl leading-tight sm:text-4xl">
-          Depoimentos de profissionais que aplicaram o{" "}
-          <span className="italic text-gold-gradient">Método 4A</span> em breve.
-        </h2>
-        <p className="mt-5 mx-auto max-w-2xl text-muted-foreground leading-relaxed">
-          Estamos organizando os relatos recebidos de cosmetólogas, esteticistas e farmacêuticas
-          magistrais que já aplicam o método no consultório e na manipulação. Este espaço será atualizado
-          em breve com falas reais — nada de frases inventadas.
-        </p>
-        <div className="mt-8 inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.3em] text-gold">
-          <span className="h-px w-8 bg-gold/60" />
-          Atualização em curso
-          <span className="h-px w-8 bg-gold/60" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------- Pricing ---------- */
 function Pricing() {
   const bullets = [
-    "E-book completo — 8 capítulos, +34 páginas",
+    "8 capítulos que reorganizam seu raciocínio clínico",
     "Método 4A completo com exemplos clínicos",
     "Roteiro de avaliação e pensamento em camadas",
     "Guia de associação de ativos com 4 princípios",
@@ -691,17 +691,23 @@ function Pricing() {
       <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-radial-gold)" }} />
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
-          <Eyebrow>Sua entrada no ecossistema</Eyebrow>
+          <Eyebrow>Escolha como começar</Eyebrow>
           <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
             Do raciocínio clínico à <span className="italic text-gold-gradient">prática magistral</span>.
           </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-muted-foreground leading-relaxed">
+            São duas formas de entrar: <span className="text-foreground">Opção 1</span> — só o e-book base,
+            para construir a fundação. <span className="text-foreground">Opção 2</span> — o ecossistema
+            completo com os 3 materiais, logo abaixo, para quem quer raciocínio, ativos e fórmulas de uma
+            vez.
+          </p>
         </div>
 
         <div className="mt-14 overflow-hidden rounded-3xl border border-gold/40 bg-gradient-to-br from-surface-elevated/90 to-surface/50 shadow-[var(--shadow-elegant)]">
           <div className="grid gap-0 lg:grid-cols-[1.1fr_1fr]">
             <div className="p-10 lg:p-12">
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[0.65rem] uppercase tracking-[0.3em] text-gold">
-                <Zap className="h-3 w-3" /> Oferta de lançamento
+                <Zap className="h-3 w-3" /> Opção 1 · Só o e-book base
               </div>
               <h3 className="mt-5 font-display text-3xl">
                 E-book Cosmetologia Regenerativa
@@ -803,7 +809,7 @@ function Bundle() {
           <div className="grid gap-0 lg:grid-cols-[1fr_1fr]">
             <div className="p-8 lg:p-12">
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[0.65rem] uppercase tracking-[0.3em] text-gold">
-                <Package className="h-3 w-3" /> Combo dos 3 e-books
+                <Package className="h-3 w-3" /> Opção 2 · Recomendado
               </div>
               <h3 className="mt-5 font-display text-2xl lg:text-3xl">
                 Ecossistema Cosmetologia Regenerativa Aplicada
@@ -1025,7 +1031,11 @@ function Footer() {
             Método 4A © {new Date().getFullYear()} · Erik dos Santos
           </div>
         </div>
-        <div className="text-xs text-muted-foreground">Cosmetologia Regenerativa Aplicada</div>
+        <div className="max-w-md text-center text-xs leading-relaxed text-muted-foreground sm:text-right">
+          Cosmetologia Regenerativa Aplicada
+          <br />
+          Pagamento, nota fiscal e garantia de 7 dias processados pela Hotmart.
+        </div>
       </div>
     </footer>
   );
