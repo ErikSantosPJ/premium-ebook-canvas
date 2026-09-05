@@ -176,6 +176,24 @@ function Hero() {
   );
 }
 
+/* ---------- Inline CTA ---------- */
+function InlineCta({ text, label, href }: { text: string; label: string; href: string }) {
+  return (
+    <div className="mx-auto max-w-7xl px-6">
+      <div className="flex flex-col items-center justify-between gap-5 rounded-2xl border border-gold/20 bg-surface/50 px-7 py-6 text-center sm:flex-row sm:text-left">
+        <p className="font-display text-xl text-foreground/90 sm:text-2xl">{text}</p>
+        <a
+          href={href}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-6 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold transition hover:bg-gold/20 sm:w-auto"
+        >
+          <span className="whitespace-nowrap">{label}</span>
+          <ArrowRight className="h-3.5 w-3.5 shrink-0" />
+        </a>
+      </div>
+    </div>
+  );
+}
+
 function Stat({ n, label }: { n: string; label: string }) {
   return (
     <div>
@@ -536,7 +554,7 @@ function Chapters() {
             </h2>
           </div>
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <BookOpen className="h-4 w-4 text-gold" /> +34 páginas · leitura estratégica
+            <BookOpen className="h-4 w-4 text-gold" /> Leitura densa e direta · sem enchimento
           </div>
         </div>
 
@@ -653,31 +671,6 @@ function Author() {
         <blockquote className="mt-10 mx-auto max-w-3xl border-t border-b border-gold/20 py-8 font-display italic text-2xl sm:text-3xl text-foreground/90">
           "Nome bonito não regenera célula. Ciência sim."
         </blockquote>
-      </div>
-    </section>
-  );
-}
-
-/* ---------- Testimonials (placeholder — reais em breve) ---------- */
-function Testimonials() {
-  return (
-    <section className="mx-auto max-w-5xl px-6 py-24">
-      <div className="rounded-3xl border border-gold/20 bg-surface/50 p-10 text-center lg:p-14">
-        <Eyebrow>Ecos da prática</Eyebrow>
-        <h2 className="mt-4 font-display text-3xl leading-tight sm:text-4xl">
-          Depoimentos de profissionais que aplicaram o{" "}
-          <span className="italic text-gold-gradient">Método 4A</span> em breve.
-        </h2>
-        <p className="mt-5 mx-auto max-w-2xl text-muted-foreground leading-relaxed">
-          Estamos organizando os relatos recebidos de cosmetólogas, esteticistas e farmacêuticas
-          magistrais que já aplicam o método no consultório e na manipulação. Este espaço será atualizado
-          em breve com falas reais — nada de frases inventadas.
-        </p>
-        <div className="mt-8 inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.3em] text-gold">
-          <span className="h-px w-8 bg-gold/60" />
-          Atualização em curso
-          <span className="h-px w-8 bg-gold/60" />
-        </div>
       </div>
     </section>
   );
