@@ -46,11 +46,20 @@ function LandingPage() {
       <Problem />
       <Solution />
       <Method4A />
+      <InlineCta
+        text="O Método 4A completo está no e-book base."
+        label="Ver a oferta"
+        href="#comprar"
+      />
       <Ecosystem />
+      <InlineCta
+        text="Prefere começar com os três materiais juntos?"
+        label="Ver o combo dos 3"
+        href="#combo"
+      />
       <Chapters />
       <ForWhom />
       <Author />
-      <Testimonials />
       <Pricing />
       <Bundle />
       <Guarantee />
@@ -73,9 +82,7 @@ function TopBar() {
           </div>
         </div>
         <a
-          href={CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+          href="#comprar"
           className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-gold hover:bg-gold/20 transition"
         >
           Garantir acesso <ArrowRight className="h-3.5 w-3.5" />
