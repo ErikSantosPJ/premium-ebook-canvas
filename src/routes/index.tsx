@@ -694,100 +694,6 @@ function Author() {
   );
 }
 
-/* ---------- Pricing ---------- */
-function Pricing() {
-  const bullets = [
-    "8 capítulos que reorganizam seu raciocínio clínico",
-    "Método 4A completo com exemplos clínicos",
-    "Roteiro de avaliação e pensamento em camadas",
-    "Guia de associação de ativos com 4 princípios",
-    "7 erros mais comuns e como se proteger deles",
-    "Acesso imediato · leitura vitalícia",
-  ];
-  return (
-    <section id="comprar" className="relative py-24 lg:py-32">
-      <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-radial-gold)" }} />
-      <div className="mx-auto max-w-4xl px-6">
-        <div className="text-center">
-          <Eyebrow>Escolha como começar</Eyebrow>
-          <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
-            Do raciocínio clínico à <span className="italic text-gold-gradient">prática magistral</span>.
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-muted-foreground leading-relaxed">
-            São duas formas de entrar: <span className="text-foreground">Opção 1</span> — só o e-book base,
-            para construir a fundação. <span className="text-foreground">Opção 2</span> — o ecossistema
-            completo com os 3 materiais, logo abaixo, para quem quer raciocínio, ativos e fórmulas de uma
-            vez.
-          </p>
-        </div>
-
-        <div className="mt-14 overflow-hidden rounded-3xl border border-gold/40 bg-gradient-to-br from-surface-elevated/90 to-surface/50 shadow-[var(--shadow-elegant)]">
-          <div className="grid gap-0 lg:grid-cols-[1.1fr_1fr]">
-            <div className="p-10 lg:p-12">
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[0.65rem] uppercase tracking-[0.3em] text-gold">
-                <Zap className="h-3 w-3" /> Opção 1 · Só o e-book base
-              </div>
-              <h3 className="mt-5 font-display text-3xl">
-                E-book Cosmetologia Regenerativa
-                <br />
-                <span className="text-gold-gradient italic">Método 4A</span>
-              </h3>
-
-              <ul className="mt-7 space-y-3.5">
-                {bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-3 text-foreground/90">
-                    <div className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold/15">
-                      <Check className="h-3 w-3 text-gold" />
-                    </div>
-                    <span className="text-sm sm:text-base">{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="relative border-t border-gold/20 bg-background/50 p-6 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
-              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">De</div>
-              <div className="mt-1 font-display text-2xl text-muted-foreground line-through decoration-destructive/60 sm:text-3xl">
-                R$ 247,00
-              </div>
-
-              <div className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">Por apenas</div>
-              <div className="mt-2 flex items-baseline gap-1.5 sm:gap-2">
-                <span className="font-display text-5xl leading-none text-gold-gradient sm:text-6xl">R$ 187</span>
-                <span className="font-display text-xl text-gold/70 sm:text-2xl">,00</span>
-              </div>
-              <div className="mt-3 text-sm text-muted-foreground">
-                ou <span className="font-medium text-foreground">10x de R$ 22,03</span> no cartão
-              </div>
-
-              <a
-                href={CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-                className="mt-8 flex w-full items-center justify-center gap-3 rounded-full bg-gold-gradient px-4 py-4 text-center text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:px-6 sm:text-sm sm:tracking-widest"
-              >
-                <span className="whitespace-nowrap">Quero começar agora</span>
-                <ArrowRight className="h-4 w-4 shrink-0" />
-              </a>
-
-              <div className="mt-5 flex flex-col gap-2 text-xs text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-gold" /> Garantia incondicional de 7 dias
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="h-3.5 w-3.5 shrink-0 text-gold" /> Acesso liberado em minutos
-                </div>
-                <div className="flex items-center gap-2">
-                  <Lock className="h-3.5 w-3.5 shrink-0 text-gold" /> Pagamento 100% seguro
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 
 /* ---------- Bundle ---------- */
@@ -1018,20 +924,20 @@ function FinalCTA() {
           <span className="italic text-gold-gradient">começa agora.</span>
         </h2>
         <p className="mt-6 mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Você já entendeu que o problema não é o ativo — é o raciocínio. O Método 4A te dá a estrutura
-          para nunca mais prescrever no escuro.
+          Você já entendeu que o problema não é o ativo — é o raciocínio. O ecossistema completo te dá a
+          estrutura para pensar, dominar ativos e prescrever com previsibilidade clínica.
         </p>
         <a
-          href={CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+          href={COMBO_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-10 inline-flex w-full max-w-md items-center justify-center gap-3 rounded-full bg-gold-gradient px-6 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:w-auto sm:px-10 sm:py-5 sm:text-sm sm:tracking-widest"
         >
-          <span className="whitespace-nowrap">Quero o e-book por R$ 187</span>
+          <span className="whitespace-nowrap">Quero o ecossistema completo</span>
           <ArrowRight className="h-4 w-4 shrink-0" />
         </a>
         <p className="mt-5 text-xs text-muted-foreground">
-          ou 10x de R$ 22,03 · garantia de 7 dias · acesso imediato
+          Acesso imediato aos 3 e-books · garantia de 7 dias · pagamento seguro
         </p>
       </div>
     </section>
