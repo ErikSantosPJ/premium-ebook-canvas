@@ -33,7 +33,26 @@ import molecular from "@/assets/texture-molecular.jpg";
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
+  head: () => ({
+    meta: [
+      { title: "Cosmetologia Regenerativa Aplicada | Os 3 E-books de Erik dos Santos" },
+      {
+        name: "description",
+        content:
+          "O ecossistema completo: Método 4A, Banco de Ativos e Banco de Fórmulas. Do raciocínio clínico à prática magistral, com 150 fórmulas comentadas.",
+      },
+      { property: "og:title", content: "Cosmetologia Regenerativa Aplicada — Os 3 E-books" },
+      {
+        property: "og:description",
+        content:
+          "Método 4A, Banco de Ativos e Banco de Fórmulas: pensar, dominar e prescrever com previsibilidade clínica.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
 });
+
 
 const CHECKOUT_URL = "https://hotm.io/jMbG8b8j";
 const COMBO_URL = "https://pay.hotmart.com/N105770857X?off=4wihtw2s&checkoutMode=10&bid=1788213100496";
