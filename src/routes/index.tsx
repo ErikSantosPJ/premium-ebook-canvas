@@ -22,7 +22,6 @@ import {
   Star,
   Lock,
   Clock,
-  Zap,
 } from "lucide-react";
 import heroImg from "@/assets/hero-regeneration.jpg";
 
