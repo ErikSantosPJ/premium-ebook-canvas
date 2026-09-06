@@ -724,15 +724,15 @@ function Bundle() {
           formação.
         </h2>
         <p className="mx-auto mb-14 max-w-2xl text-center text-lg text-muted-foreground leading-relaxed">
-          Quem parte pela base e quer ir além leva o ecossistema completo. Você economiza e ainda recebe os
-          três materiais com a mesma qualidade e acesso imediato.
+          A oferta principal é o ecossistema completo. Você leva os três materiais com acesso imediato,
+          economizando no conjunto.
         </p>
 
         <div className="overflow-hidden rounded-3xl border border-gold/40 bg-gradient-to-br from-surface-elevated/90 to-surface/50 shadow-[var(--shadow-elegant)]">
           <div className="grid gap-0 lg:grid-cols-[1fr_1fr]">
             <div className="p-8 lg:p-12">
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[0.65rem] uppercase tracking-[0.3em] text-gold">
-                <Package className="h-3 w-3" /> Opção 2 · Recomendado
+                <Package className="h-3 w-3" /> Combo com 3 e-books
               </div>
               <h3 className="mt-5 font-display text-2xl lg:text-3xl">
                 Ecossistema Cosmetologia Regenerativa Aplicada
@@ -839,15 +839,15 @@ function FAQ() {
     },
     {
       q: "Vem com fórmulas prontas?",
-      a: "Não. E esse é o ponto. Fórmulas prontas mantêm você presa à tentativa e erro. O Método 4A te dá algo maior: a estrutura de pensamento para construir suas próprias estratégias.",
+      a: "Sim. O combo inclui o Banco de Fórmulas Magistrais com 150 fórmulas comentadas por queixa clínica. Além disso, o Método 4A te ensina o raciocínio por trás de cada prescrição.",
     },
     {
       q: "Como recebo o acesso?",
-      a: "Assim que o pagamento é aprovado, você recebe o acesso digital no e-mail. Leitura vitalícia — pode voltar quantas vezes quiser.",
+      a: "Assim que o pagamento é aprovado, você recebe o acesso digital dos 3 e-books no e-mail. Leitura vitalícia — pode voltar quantas vezes quiser.",
     },
     {
       q: "Tem suporte e continuação?",
-      a: "Este é o produto base do ecossistema Método 4A. Novos materiais e aprofundamentos estão em construção — quem entra pela base tem prioridade.",
+      a: "Este é o ecossistema completo do Método 4A. Novos materiais e aprofundamentos estão em construção — quem entra pelo combo tem prioridade.",
     },
     {
       q: "E se eu não gostar?",
@@ -855,7 +855,7 @@ function FAQ() {
     },
     {
       q: "Quais formas de pagamento?",
-      a: "Cartão de crédito em até 10x de R$ 22,03, Pix ou boleto. No Pix e no cartão à vista o acesso é liberado na hora: R$ 187,00.",
+      a: "Cartão de crédito parcelado, Pix ou boleto. No Pix e no cartão à vista o acesso é liberado na hora.",
     },
     {
       q: "O pagamento é seguro?",
