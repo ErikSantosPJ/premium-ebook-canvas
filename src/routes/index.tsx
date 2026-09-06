@@ -25,14 +25,34 @@ import {
   Zap,
 } from "lucide-react";
 import heroImg from "@/assets/hero-regeneration.jpg";
-import ebookMockup from "@/assets/ebook-mockup.png";
+
+import ecosystemMockup from "@/assets/ecosystem-mockup.png";
 import authorPhoto from "@/assets/autor.png";
 import molecular from "@/assets/texture-molecular.jpg";
 
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
+  head: () => ({
+    meta: [
+      { title: "Cosmetologia Regenerativa Aplicada | Os 3 E-books de Erik dos Santos" },
+      {
+        name: "description",
+        content:
+          "O ecossistema completo: Método 4A, Banco de Ativos e Banco de Fórmulas. Do raciocínio clínico à prática magistral, com 150 fórmulas comentadas.",
+      },
+      { property: "og:title", content: "Cosmetologia Regenerativa Aplicada — Os 3 E-books" },
+      {
+        property: "og:description",
+        content:
+          "Método 4A, Banco de Ativos e Banco de Fórmulas: pensar, dominar e prescrever com previsibilidade clínica.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
 });
+
 
 const CHECKOUT_URL = "https://hotm.io/jMbG8b8j";
 const COMBO_URL = "https://pay.hotmart.com/N105770857X?off=4wihtw2s&checkoutMode=10&bid=1788213100496";
@@ -118,60 +138,60 @@ function Hero() {
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/70 via-background/85 to-background" />
 
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:py-32 lg:gap-16 items-center">
-        <div className="animate-fade-up">
-          <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-[0.7rem] uppercase tracking-[0.3em] text-gold">
-            <Sparkles className="h-3 w-3" /> E-book base — Produto 1 do ecossistema
-          </div>
-          <h1 className="mt-6 font-display text-5xl leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
-            Cosmetologia
-            <br />
-            <span className="italic text-gold-gradient">Regenerativa</span>
-            <br />
-            Aplicada.
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Do raciocínio clínico à prática magistral. O <span className="text-foreground">Método 4A</span>{" "}
-            é a estrutura de pensamento que transforma sua cosmetologia em algo previsível, reprodutível e
-            fundamentado em processos biológicos reais.
-          </p>
-
-          <blockquote className="mt-8 border-l-2 border-gold/60 pl-5 font-display italic text-xl text-foreground/90">
-            "Não é sobre o ativo. É sobre o raciocínio."
-          </blockquote>
-
-          <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center">
-            <a
-              href="#comprar"
-              className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-gold-gradient px-6 py-4 text-center text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:w-auto sm:px-8 sm:text-xs sm:tracking-widest"
-            >
-              <span className="whitespace-nowrap">Quero o e-book por R$ 187</span>
-              <ArrowRight className="h-4 w-4 shrink-0 transition group-hover:translate-x-1" />
-            </a>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <Lock className="h-3.5 w-3.5 shrink-0 text-gold" />
-              <span>Compra 100% segura · Acesso imediato</span>
-            </div>
-          </div>
-
-          <div className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-gold/10 pt-6">
-            <Stat n="8" label="Capítulos" />
-            <Stat n="4A" label="O método" />
-            <Stat n="∞" label="Aplicações clínicas" />
-          </div>
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-20 text-center lg:py-28">
+        <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-[0.7rem] uppercase tracking-[0.3em] text-gold">
+          <Sparkles className="h-3 w-3" /> O ecossistema completo — 3 e-books
         </div>
 
-        <div className="relative mx-auto flex w-full max-w-sm items-center justify-center sm:max-w-md lg:max-w-none lg:mx-0">
-          <div className="pointer-events-none absolute inset-x-6 bottom-4 h-20 rounded-full bg-gold/25 blur-3xl sm:inset-x-10 sm:h-24" />
+        <h1 className="animate-fade-up font-display text-4xl leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+          Cosmetologia
+          <br />
+          <span className="italic text-gold-gradient">Regenerativa</span> Aplicada.
+        </h1>
+
+        <p className="animate-fade-up max-w-2xl text-base text-muted-foreground leading-relaxed sm:text-lg">
+          Do raciocínio clínico à prática magistral. Três materiais que se completam:{" "}
+          <span className="text-foreground">o Método 4A</span>, o{" "}
+          <span className="text-foreground">Banco de Ativos</span> e o{" "}
+          <span className="text-foreground">Banco de Fórmulas</span> — pensar, dominar e prescrever.
+        </p>
+
+        <div className="relative mx-auto w-full max-w-[320px] sm:max-w-xl lg:max-w-3xl">
+          <div className="pointer-events-none absolute inset-x-8 bottom-2 h-16 rounded-full bg-gold/25 blur-3xl sm:h-24" />
           <img
-            src={ebookMockup}
-            alt="Capa do e-book Cosmetologia Regenerativa - Método 4A"
-            width={1000}
-            height={1400}
-            className="relative h-auto w-full max-w-[280px] animate-float object-contain drop-shadow-[0_35px_50px_rgba(80,55,40,0.3)] sm:max-w-[360px] lg:max-w-[440px] xl:max-w-[480px]"
+            src={ecosystemMockup}
+            alt="Os três e-books do ecossistema Cosmetologia Regenerativa Aplicada: Método 4A, Banco de Ativos e Banco de Fórmulas"
+            width={1129}
+            height={633}
+            className="relative h-auto w-full animate-float object-contain drop-shadow-[0_35px_60px_rgba(80,55,40,0.25)]"
           />
         </div>
+
+        <blockquote className="font-display italic text-lg text-foreground/90 sm:text-xl">
+          "Não é sobre o ativo. É sobre o raciocínio."
+        </blockquote>
+
+        <div className="flex w-full flex-col items-center gap-4">
+          <a
+            href="#combo"
+            className="group inline-flex w-full max-w-md items-center justify-center gap-3 rounded-full bg-gold-gradient px-6 py-4 text-center text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[var(--shadow-gold)] transition hover:brightness-110 sm:w-auto sm:px-8 sm:text-xs sm:tracking-widest"
+          >
+            <span className="whitespace-nowrap">Ver o combo dos 3 e-books</span>
+            <ArrowRight className="h-4 w-4 shrink-0 transition group-hover:translate-x-1" />
+          </a>
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Lock className="h-3.5 w-3.5 shrink-0 text-gold" />
+            <span>Compra 100% segura · Acesso imediato</span>
+          </div>
+        </div>
+
+        <div className="grid w-full max-w-lg grid-cols-3 gap-6 border-t border-gold/10 pt-6">
+          <Stat n="3" label="E-books" />
+          <Stat n="4A" label="O método" />
+          <Stat n="150" label="Fórmulas" />
+        </div>
       </div>
+
     </section>
   );
 }
