@@ -54,7 +54,6 @@ export const Route = createFileRoute("/")({
 });
 
 
-const CHECKOUT_URL = "https://hotm.io/jMbG8b8j";
 const COMBO_URL = "https://pay.hotmart.com/N105770857X?off=4wihtw2s&checkoutMode=10&bid=1788213100496";
 
 function LandingPage() {
@@ -67,9 +66,9 @@ function LandingPage() {
       <Solution />
       <Method4A />
       <InlineCta
-        text="O Método 4A completo está no e-book base."
-        label="Ver a oferta"
-        href="#comprar"
+        text="O Método 4A completo está dentro do ecossistema."
+        label="Ver o combo"
+        href="#combo"
       />
       <Ecosystem />
       <InlineCta
@@ -80,7 +79,6 @@ function LandingPage() {
       <Chapters />
       <ForWhom />
       <Author />
-      <Pricing />
       <Bundle />
       <Guarantee />
       <FAQ />
@@ -102,7 +100,7 @@ function TopBar() {
           </div>
         </div>
         <a
-          href="#comprar"
+          href="#combo"
           className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-gold hover:bg-gold/20 transition"
         >
           Garantir acesso <ArrowRight className="h-3.5 w-3.5" />
