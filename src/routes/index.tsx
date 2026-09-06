@@ -25,7 +25,7 @@ import {
   Zap,
 } from "lucide-react";
 import heroImg from "@/assets/hero-regeneration.jpg";
-import ebookMockup from "@/assets/ebook-mockup.png";
+
 import ecosystemMockup from "@/assets/ecosystem-mockup.png";
 import authorPhoto from "@/assets/autor.png";
 import molecular from "@/assets/texture-molecular.jpg";
