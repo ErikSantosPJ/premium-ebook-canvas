@@ -680,9 +680,12 @@ function Author() {
         <h2 className="mt-8 font-display text-4xl sm:text-5xl">Erik dos Santos</h2>
         <p className="mt-2 text-sm uppercase tracking-[0.3em] text-gold">Cosmetologia Regenerativa</p>
         <p className="mt-8 mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Erik une ciência, raciocínio clínico e prática magistral em um método próprio que tira a
-          cosmetologia do lugar de tentativa e erro. O e-book é o produto base do ecossistema — a fundação
-          para uma estética que trata processo, não sintoma.
+          Graduando em Farmácia pela Uniasselvi, Erik dos Santos atua há quase dez anos com
+          manipulação magistral e prescrição personalizada de cosméticos e fórmulas — sempre com foco
+          na individualização do cuidado e na aplicação responsável da ciência. Sua trajetória é
+          marcada pelo desenvolvimento de materiais educacionais voltados à saúde estética, ampliando
+          a autonomia profissional e combatendo práticas baseadas em desinformação ou generalizações
+          perigosas.
         </p>
 
         <blockquote className="mt-10 mx-auto max-w-3xl border-t border-b border-gold/20 py-8 font-display italic text-2xl sm:text-3xl text-foreground/90">
