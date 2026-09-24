@@ -53,7 +53,7 @@ export const Route = createFileRoute("/")({
 });
 
 
-const COMBO_URL = "https://pay.hotmart.com/N105770857X?off=4wihtw2s&checkoutMode=10&bid=1788213100496";
+const COMBO_URL = "https://pay.hotmart.com/N105770857X?checkoutMode=10&bid=1790280696023";
 
 function LandingPage() {
   return (
@@ -774,7 +774,8 @@ function Bundle() {
                 <span className="font-display text-xl text-gold/70 sm:text-2xl">,00</span>
               </div>
               <div className="mt-3 text-sm text-muted-foreground">
-                ou em até <span className="font-medium text-foreground">10x no cartão</span>
+                <span className="font-medium text-foreground">Parcele em até 10x no cartão</span> — valor das
+                parcelas exibido no ato da compra.
               </div>
 
               <a
